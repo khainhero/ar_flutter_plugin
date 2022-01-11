@@ -258,7 +258,7 @@ internal class AndroidARView(
                             if (arSceneView.session != null) {
                                 val config = Config(arSceneView.session)
                                 config.cloudAnchorMode = Config.CloudAnchorMode.ENABLED
-                                if(arSceneView.session.isDepthModeSupported(Config.DepthMode.AUTOMATIC)) {
+                                if(arSceneView.session?.isDepthModeSupported(Config.DepthMode.AUTOMATIC)) {
                                    config.depthMode = Config.DepthMode.AUTOMATIC
                                 }
                                 config.updateMode = Config.UpdateMode.LATEST_CAMERA_IMAGE
