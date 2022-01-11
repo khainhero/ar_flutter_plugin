@@ -402,6 +402,9 @@ internal class AndroidARView(
                     return
                 } else {
                     val config = Config(session)
+                    if(session.isDepthModeSupported(Config.DepthMode.AUTOMATIC)) {
+                        config.deptMode = Config.DepthMode.AUTOMATIC
+                    }
                     config.updateMode = Config.UpdateMode.LATEST_CAMERA_IMAGE
                     config.focusMode = Config.FocusMode.AUTO
                     session.configure(config)
